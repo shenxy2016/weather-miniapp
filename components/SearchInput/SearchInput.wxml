@@ -1,0 +1,6 @@
+<view class="search_input">
+    <navigator url="/pages/search/index">
+        Please enter the city name
+    </navigator>
+</view>
+  
