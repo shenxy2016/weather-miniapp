@@ -1,6 +1,5 @@
 import { requestLocaion, filterData, showErrModal } from "../../utils/util.js";
 import { requestWeather } from "../../request/index.js";
-import mock from "../../request/mock_payload";
 
 Page({
   data: {
@@ -33,7 +32,6 @@ Page({
     //get current location weather on first load
     this.getCurrentLocationWeather();
 
-    // this.getMockData();
   },
 
   handleUnitsChange(e){
@@ -70,19 +68,6 @@ Page({
         )
       }
     }    
-  },
-
-  //test app with mock data
-  getMockData(){
-    console.log(mock.list[0]);
-    const data = filterData(mock);
-    console.log(data.weather[0]);
-    console.log(data.dayWeather);
-    this.setData({
-      weather: data.weather, 
-      city: data.city,
-      dayWeather: data.dayWeather
-    });
   },
 
   getCurrentLocationWeather(){
