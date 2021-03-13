@@ -1,8 +1,33 @@
 <view class="weather_index">
-
-    <SearchInput></SearchInput> 
-    
-    
+    <block wx:if="{{city}}">
+        <SearchInput bindsearch="handleWeatherSearch" inputValue="{{inputValue}}" bindchangeInput="handleChangeInput"></SearchInput>
+        <view class="cur">
+            <view class="cur_city">{{city}}</view>
+            <view class="cur_weather">{{weather[0].weather}}</view>
+            <view class="cur_temp" bindtap="handleUnitsChange">{{weather[0].temp[unit]}}</view>
+            <view class="cur_hl_temp">
+                <view>Highest {{weather[0].minTemp[unit]}}</view>
+                <view>Lowest {{weather[0].maxTemp[unit]}}</view>
+            </view>
+        </view>
+        <scroll-view class="hrs_weather" scroll-x>
+            <view wx:for="{{weather}}" class="hr_weather" wx:key="idx" wx:for-item="w">
+                <view class="hr_weather_detail">{{w.time[1]}}</view>
+                <view class="hr_weather_detail">
+                    <text class="iconfont {{weatherMap[w.weather]}}"></text>
+                </view>
+                <view class="hr_weather_detail">{{w.temp[unit]}}</view>
+            </view>
+        </scroll-view>
+        <view class="days_weather">
+            <view class="weather_box" wx:for="{{dayWeather}}" wx:key="idx" wx:for-index="idx" wx:for-item="w">
+                <view class="l_date">{{w.time[0]}}</view>
+                <view class="l_weather">
+                    <text class="iconfont {{weatherMap[w.weather]}}"></text>
+                </view>
+                <view class="l_t">{{w.low[unit]}}</view>
+                <view class="l_t">{{w.high[unit]}}</view>
+            </view>
+        </view>
+    </block>
 </view>
-  
-  

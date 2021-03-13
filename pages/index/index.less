@@ -1,0 +1,82 @@
+.weather_index{
+    height: 100vh;
+    background-color: var(--themeColor);
+
+    .cur{
+        
+        color:#fff;  
+        height: 700rpx;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1rpx solid #cdcdcd;
+        .cur_city{
+            top: 50rpx;
+            font-size: 100rpx;
+        }
+        .cur_weather{
+            font-size: 50rpx;
+            font-weight: 100;
+        }
+        .cur_temp{
+            font-size: 150rpx;
+            font-family:"SimHei";
+            font-weight:200;
+        }
+        .cur_hl_temp{
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            font-size:30rpx;
+        }
+    }
+    .hrs_weather{
+        white-space: nowrap;
+        height: 160rpx;
+        width: 100%;
+        margin-bottom: 20rpx;
+        padding: 30rpx;
+        border-bottom: 1rpx solid #cdcdcd;
+        .hr_weather{
+            display:inline-block;
+            height: 100%;
+            width: 25%;
+            color: white;
+            font-size: 30rpx;
+            .hr_weather_detail{
+                padding-bottom: 10rpx;
+            }     
+        }
+    }
+    .days_weather{
+        height:400rpx;
+        view{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .weather_box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13rpx 0;
+            width: 90%;
+            color: white;
+            font-size: 30rpx;
+            .l_date{
+                flex:4;
+            }
+            .l_weather{
+                flex:4;
+            }
+            .l_t{
+                flex:2;
+            }
+        }
+        
+    }
+}

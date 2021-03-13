@@ -1,6 +1,14 @@
-<view class="search_input">
-    <navigator url="/pages/search/index">
-        Please enter the city name
-    </navigator>
-</view>
-  
+<form catchsubmit="formSubmit">
+    <view class="search_input">
+        <view class="search_input_area">
+            <input name="city" type="text"  bindinput="textChange" value="{{inputValue}}"/>
+        </view>
+        <view class="search_submit">
+            <view class="search_submit_text">
+                <text class="iconfont icon-search"></text>       
+            </view>       
+            <button formType="submit"></button>
+        </view>
+        
+    </view>
+</form>

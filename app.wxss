@@ -1,6 +1,6 @@
 @import "./styles/iconfont.wxss";
 
-page, view, text, swiper, swiper-item, image, navigator{
+page, view, text, swiper, swiper-item, image, navigator, form{
     padding: 0;
     margin: 0;
     box-sizing: border-box;

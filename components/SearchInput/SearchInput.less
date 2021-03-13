@@ -1,14 +1,50 @@
-.search_input{
-    height: 90rpx;
-    padding: 15rpx;
-    background-color: var(--themeColor);
-    navigator{
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff;
-        border-radius: 15rpx;
-        color: 666;
+@import "../../styles/iconfont.wxss";
+
+form{
+  position: fixed;
+  top: 20rpx;
+  width: 100vw;
+  .search_input{
+    height: 80rpx;
+    display: flex;
+    padding: 0 10rpx;
+    .search_input_area{
+      background-color: white;
+      flex: 4;
+      border-radius: 10rpx;
+      height: 100%;
+      margin-right: 5rpx;
+      line-height: 80rpx;
+      padding: 0 20rpx;
+      input{
+        height:100%;
+        :before{
+          content:" "
+        }
+      }
     }
+    .search_submit{
+      flex:1;
+      height: 100%;
+      border-radius: 10rpx;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10rpx;
+      position:relative;
+      line-height: 100%;
+      .search_submit_text{
+        color: #dedede;
+      }
+      button{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+    }
+  }
 }

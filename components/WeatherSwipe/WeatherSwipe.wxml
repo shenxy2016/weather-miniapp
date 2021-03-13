@@ -1,6 +1,0 @@
-<view class="search_input">
-    <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
-        Please enter the city name
-    </navigator>
-</view>
-  
